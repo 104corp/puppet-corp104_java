@@ -1,4 +1,4 @@
-# java
+# puppet module corp104_java
 [![Build Status](https://travis-ci.org/104corp/puppet-corp104_java.svg?branch=master)](https://travis-ci.org/104corp/puppet-corp104_java)
 
 
