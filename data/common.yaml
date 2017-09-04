@@ -1,0 +1,9 @@
+---
+corp104_java::jdk_type: 'openjdk'
+corp104_java::jdk_version: '8'
+corp104_java::http_proxy: ~
+corp104_java::proxy_download_timeout: '60'
+corp104_java::ppa_openjdk: 'ppa:openjdk-r/ppa'
+corp104_java::ppa_oracle: 'ppa:webupd8team/java'
+corp104_java::oraclejdk_rpm: '/tmp/oracle-java.rpm'
+corp104_java::oraclejdk_verify_cookie: 'Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie'
