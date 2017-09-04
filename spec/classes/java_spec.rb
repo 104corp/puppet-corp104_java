@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'java', :type => 'class' do
+describe 'corp104_java', :type => 'class' do
   context 'with defaults for all parameters' do
     let(:facts) do
       { 
@@ -12,8 +12,8 @@ describe 'java', :type => 'class' do
       }
     end
     it do
-      should contain_class('java')
-      should contain_class('java::config')
+      should contain_class('corp104_java')
+      should contain_class('corp104_java::config')
     end
 
     it do

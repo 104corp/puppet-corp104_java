@@ -1,9 +1,9 @@
 require 'spec_helper_acceptance'
 
-describe 'install java' do
+describe 'install corp104_java' do
   context 'default parameters with OpenJDK 1.8' do
     it 'should install package' do
-      pp = "class { 'java': }"
+      pp = "class { 'corp104_java': }"
 
       # Run it twice and test for idempotency
       apply_manifest(pp, :catch_failures => true)
@@ -13,7 +13,7 @@ describe 'install java' do
 
   context 'default parameters with OpenJDK 1.7' do
     it 'should install package' do
-      pp = "class { 'java': jdk_version => '7' }"
+      pp = "class { 'corp104_java': jdk_version => '7' }"
 
       if fact('osfamily') == 'Redhat'
         apply_manifest(pp, :expect_failures => true)
