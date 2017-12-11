@@ -30,6 +30,7 @@ class corp104_java::install::open_jdk inherits corp104_java {
         command => "add-apt-repository -y ${corp104_java::ppa_openjdk} && apt-get update",
         user    => 'root',
         unless  => "/usr/bin/dpkg -l | grep ${package_name}",
+        before  => Package[$package_name],
       }
     }
     'Redhat': {
