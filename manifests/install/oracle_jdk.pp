@@ -23,6 +23,10 @@ class corp104_java::install::oracle_jdk inherits corp104_java {
 
       exec { 'install-ppa':
         path    => '/bin:/usr/sbin:/usr/bin:/sbin',
+        environment => [
+          "http_proxy=${corp104_java::http_proxy}",
+          "https_proxy=${corp104_java::http_proxy}",
+        ],
         command => "add-apt-repository -y ${corp104_java::ppa_oracle} && apt-get update",
         user    => 'root',
         notify  => Exec['set-licence-select','set-licence-seen'],
