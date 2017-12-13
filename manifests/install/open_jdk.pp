@@ -26,15 +26,15 @@ class corp104_java::install::open_jdk inherits corp104_java {
       }
 
       exec { 'install-ppa':
-        path    => '/bin:/usr/sbin:/usr/bin:/sbin',
+        path        => '/bin:/usr/sbin:/usr/bin:/sbin',
         environment => [
           "http_proxy=${corp104_java::http_proxy}",
           "https_proxy=${corp104_java::http_proxy}",
         ],
-        command => "add-apt-repository -y ${corp104_java::ppa_openjdk} && apt-get update",
-        user    => 'root',
-        unless  => "/usr/bin/dpkg -l | grep ${package_name}",
-        before  => Package[$package_name],
+        command     => "add-apt-repository -y ${corp104_java::ppa_openjdk} && apt-get update",
+        user        => 'root',
+        unless      => "/usr/bin/dpkg -l | grep ${package_name}",
+        before      => Package[$package_name],
       }
     }
     'Redhat': {
