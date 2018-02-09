@@ -46,5 +46,8 @@ matrix:
 notifications:
   email: false
   slack:
+    template:
+      - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch} by %{author} %{result} in %{duration}"
+      - 'Commit message : %{commit_message}'
     rooms:
       secure: "TwWVwsa08fYnuR+4XOFh6orkfr1drJV2fQcpRmGrmmX8gRUkJ5UokIzjWIXmuxrN0ryMFkGAVrqiUTX9IzSZBM4sicebVsGakO/f6eCunHiq/jKxMN0qfpeNXYkOBSaLpKsuG3mZ/uEVJYq/F7LC7/3APN6u6HAhSwOOgtKUty8XthUCAYYRh+jyQTxl7/oYO3oi0EwHj3SRqIj/dcOLDYOHUNTzeiI490TSIbeY3ALb8CjmBWx+JLTULQNmbxylmOhHrOLz4BTfJUwK1e5TgCJSEz7VNNVjVesFgIpAgbok1mO3hn/cM9j7MBxN35/Q7a+4xpimHcrwCerwJ+jECKmjMFgzNMFEWSLYGbfrW1ybj+9qBiqq7u+vFFchb09drrMw8IV9ZCcSfPaziDNn8OwXUXUrc4Gjz6UuraooxKJNmSe1R8KbdZHh+Soi5WbP37j0kmvmAaWgc1hRKkJT8cq0Rpb3L91D/8y9mYOHEGTr335jDz47Mj/Z9ArBuik8Uy+DnjdRtrhCnm/i+re5omH2LoiW/kp/SwRpo/yFggGnaWknfdJ4AOJFrnaOkTIWqWwdzvOmiJEn2NreyL3CzqaTbJAR56lFUJ43bNTvDrjY4jimruJ6/cgRKDrwcV7zX7odxpzD8fYOuFrJ+l2aTwWH4B74rCzUTmOG8JpcT5Y="
