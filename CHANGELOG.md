@@ -1,3 +1,7 @@
+## 2018-02-09 - Release 1.1.1
+
+- fix http_proxy cannot understand environment.
+
 ## 2017-12-13 - Release 1.1.0
 
 - add repository support proxy.
