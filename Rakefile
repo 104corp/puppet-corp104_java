@@ -3,6 +3,7 @@ require 'puppet-lint/tasks/puppet-lint'
 require 'puppet_blacksmith/rake_tasks' if Bundler.rubygems.find_name('puppet-blacksmith').any?
 
 PuppetLint.configuration.fail_on_warnings = true
+PuppetLint.configuration.fix = true
 PuppetLint.configuration.send('relative')
 
 desc 'Generate pooler nodesets'

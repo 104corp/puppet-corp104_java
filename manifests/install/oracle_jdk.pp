@@ -36,11 +36,11 @@ class corp104_java::install::oracle_jdk inherits corp104_java {
       }
       else {
         exec { 'install-ppa':
-          path        => '/bin:/usr/sbin:/usr/bin:/sbin',
-          command     => "add-apt-repository -y ${corp104_java::ppa_oracle} && apt-get update",
-          user        => 'root',
-          notify      => Exec['set-licence-select','set-licence-seen'],
-          unless      => 'apt-cache policy | grep webupd8team',
+          path    => '/bin:/usr/sbin:/usr/bin:/sbin',
+          command => "add-apt-repository -y ${corp104_java::ppa_oracle} && apt-get update",
+          user    => 'root',
+          notify  => Exec['set-licence-select','set-licence-seen'],
+          unless  => 'apt-cache policy | grep webupd8team',
         }
       }
 

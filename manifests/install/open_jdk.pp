@@ -14,8 +14,8 @@ class corp104_java::install::open_jdk inherits corp104_java {
           $package_name = 'openjdk-9-jre'
           $java_home    = '/usr/lib/jvm/java-9-openjdk-amd64'
         }
-        default : {
-          fail ("unsupported openjdk 1.${corp104_java::jdk_version} version at ${facts['osfamily']}")
+        default: {
+          fail("unsupported openjdk 1.${corp104_java::jdk_version} version at ${$facts['os']['family']}")
         }
       }
 
@@ -38,16 +38,15 @@ class corp104_java::install::open_jdk inherits corp104_java {
           before      => Package[$package_name],
         }
       }
-      else
+      else {
         exec { 'install-ppa':
-          path        => '/bin:/usr/sbin:/usr/bin:/sbin',
-          command     => "add-apt-repository -y ${corp104_java::ppa_openjdk} && apt-get update",
-          user        => 'root',
-          unless      => "/usr/bin/dpkg -l | grep ${package_name}",
-          before      => Package[$package_name],
+          path    => '/bin:/usr/sbin:/usr/bin:/sbin',
+          command => "add-apt-repository -y ${corp104_java::ppa_openjdk} && apt-get update",
+          user    => 'root',
+          unless  => "/usr/bin/dpkg -l | grep ${package_name}",
+          before  => Package[$package_name],
         }
       }
-      
     }
     'Redhat': {
       case $corp104_java::jdk_version {
@@ -63,13 +62,13 @@ class corp104_java::install::open_jdk inherits corp104_java {
           $package_name = 'java-1.8.0-openjdk'
           $java_home    = '/usr/lib/jvm/jre-1.8.0-openjdk.x86_64'
         }
-        default : {
-          fail ("unsupported openjdk 1.${corp104_java::jdk_version} version at ${$facts['osfamily']}")
+        default: {
+          fail("unsupported openjdk 1.${corp104_java::jdk_version} version at ${$facts['os']['family']}")
         }
       }
     }
     default: {
-      fail ("unsupported platform ${facts['os']['family']}")
+      fail("unsupported platform ${$facts['os']['family']}")
     }
   }
 
