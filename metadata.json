@@ -1,9 +1,9 @@
 {
   "name": "104corp-corp104_java",
   "description": "corp104_java Module for Debian, Ubuntu, CentOS and RHEL.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "104corp",
-  "summary": "Install, deploysm, and configures AWS agent services.",
+  "summary": "Install, deploysm, and configures Java.",
   "license": "Apache-2.0",
   "source": "https://github.com/104corp/puppet-corp104_java",
   "project_page": "https://github.com/104corp/puppet-corp104_java",

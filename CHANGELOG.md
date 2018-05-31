@@ -1,3 +1,7 @@
+## 2018-05-31 - Release 1.1.2
+
+- fix metadata summary.
+
 ## 2018-02-09 - Release 1.1.1
 
 - fix http_proxy cannot understand environment.
