@@ -15,7 +15,9 @@ class corp104_java::install::oracle_jdk inherits corp104_java {
         }
       }
 
-      $add_apt_package = [ 'python-software-properties', 'software-properties-common' ]
+      # remove python-software-properties that only support for ubuntu <= 12.04
+      # replace it with software-python-common for ubuntu >= 12.10
+      $add_apt_package = [ 'software-properties-common' ]
       package { $add_apt_package:
         ensure => present,
         # notify => Exec['install-ppa'],

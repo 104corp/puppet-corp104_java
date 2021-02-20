@@ -1,3 +1,7 @@
+## 2021-02-20 - Release 1.1.4
+
+- remove python-software-properties that only support for ubuntu <= 12.04
+
 ## 2018-05-31 - Release 1.1.2
 
 - fix metadata summary.
