@@ -10,6 +10,14 @@ class corp104_java::install::oracle_jdk inherits corp104_java {
           $package_name = 'oracle-java9-set-default'
           $java_home    = '/usr/lib/jvm/java-9-oracle'
         }
+        '10' : {
+          $package_name = 'oracle-java10-set-default'
+          $java_home    = '/usr/lib/jvm/java-10-oracle'
+        }
+        '11' : {
+          $package_name = 'oracle-java11-set-default'
+          $java_home    = '/usr/lib/jvm/java-11-oracle'
+        }
         default : {
           fail ("unsupported oracle_jdk 1.${corp104_java::jdk_version} version at ${facts['os']['family']}")
         }

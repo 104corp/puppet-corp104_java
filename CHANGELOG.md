@@ -1,3 +1,7 @@
+## 2021-06-21 - Release 1.1.5
+
+- Support oraclejdk and openjdk version up to 11.
+
 ## 2021-02-20 - Release 1.1.4
 
 - remove python-software-properties that only support for ubuntu <= 12.04
