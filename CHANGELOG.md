@@ -1,3 +1,7 @@
+## 2022-12-29 - Release 1.1.6
+
+- Support oraclejdk and openjdk version up to 17.
+
 ## 2021-06-21 - Release 1.1.5
 
 - Support oraclejdk and openjdk version up to 11.
