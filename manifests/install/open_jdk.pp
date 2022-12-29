@@ -22,6 +22,10 @@ class corp104_java::install::open_jdk inherits corp104_java {
           $package_name = 'openjdk-11-jre'
           $java_home    = '/usr/lib/jvm/java-11-openjdk-amd64'
         }
+        '17' : {
+          $package_name = 'openjdk-17-jre'
+          $java_home    = '/usr/lib/jvm/java-17-openjdk-amd64'
+        }
         default: {
           fail("unsupported openjdk 1.${corp104_java::jdk_version} version at ${$facts['os']['family']}")
         }
